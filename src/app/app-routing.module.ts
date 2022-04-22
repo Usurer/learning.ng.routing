@@ -9,7 +9,7 @@ const firstRoute: Route = {
 
 const routes: Routes = [
   firstRoute,
-  {path : 'second', component: SecondComponent, outlet: "secondary" },
+  {path : 'second', component: SecondComponent, outlet: "eager-top-level" },
   { path: 'lazy', loadChildren: () => import('./lazy/lazy/lazy.module').then(m => m.LazyModule) }
 ];
 

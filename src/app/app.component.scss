@@ -1,0 +1,32 @@
+@mixin borderedFlex($borderColor) {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid $borderColor;
+  margin: 5px;
+
+  div {
+    background-color: #eaeaea;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin: 5px;
+  }
+}
+
+#main-outlet-wrapper {
+  @include borderedFlex(red);
+}
+
+#eager-top-outlet {
+  @include borderedFlex(magenta);
+}
+
+#lazy-top-outlet {
+  @include borderedFlex(pink);
+}

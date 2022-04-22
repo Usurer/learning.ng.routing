@@ -1,15 +1,30 @@
+<section class="buttons">
+  <a href="/">Reset</a>
 
-<a routerLink="/first">First</a>
-<br/>
-<a routerLink="/lazy">Lazy</a>
-<br/>
-<a href="http://localhost:4200/(secondary:second)">Second (go to http://localhost:4200/(secondary:second))</a>
+  <a routerLink="/first">Show eager component from the App Module in the Main Outlet</a>
 
-<div>OUTER OUTLET</div>
-<div>
-  <router-outlet></router-outlet>
-</div>
-<div>============</div>
-<router-outlet name="secondary"></router-outlet>
-<div>~~~~~~~~~~~~~~~~~~~~~~~</div>
-<router-outlet name="lazyoutlet"></router-outlet>
+  <a routerLink="/lazy">Load Lazy module into the Main Outlet</a>
+
+  <a href="http://localhost:4200/(eager-top-level:second)">Show eager Second component from the App Module in the Eager Top Outlet</a>
+</section>
+
+<section id="main-outlet-wrapper">
+  <h3>Main outlet</h3>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</section>
+
+<section id="eager-top-outlet">
+  <h3>Eager Top Level Outlet</h3>
+  <div>
+    <router-outlet name="eager-top-level"></router-outlet>
+  </div>
+</section>
+
+<section id="lazy-top-outlet">
+  <h3>Lazy Top Level Outlet</h3>
+  <div>
+    <router-outlet name="lazy-top-level"></router-outlet>
+  </div>
+</section>
